@@ -1,0 +1,116 @@
+* {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: bold;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: beige;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#instructions {
+  position: absolute;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+}
+
+#calculator-container {
+  padding: 10px;
+  border-radius: 5px;
+  width: 335px;
+  background-color: rgb(85, 79, 79);
+}
+
+#name-tag {
+  font-size: 20px;
+  color: rgb(255, 145, 0);
+  margin-bottom: 3px;
+}
+
+#result {
+  min-height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: rgb(184, 180, 180);
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#result :first-child {
+  font-size: 20px;
+  color: rgb(58, 58, 58);
+}
+
+#result :last-child {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+#buttons-container {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(5, 70px);
+  gap: 5px;
+}
+
+.big-button {
+  grid-row: span 2;
+  background-color: rgb(255, 145, 0);
+}
+
+.big-button:hover {
+  background-color: rgb(255, 166, 0);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  #main-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  #instructions {
+    margin: 40px 0;
+    position: relative;
+    left: 0;
+  }
+}
+
+@media (max-width: 1520px) {
+  #instructions {
+    margin: 40px 0;
+    position: relative;
+    left: 0;
+  }
+  #main-container {
+    justify-content: space-between;
+    min-width: 790px;
+    padding: 10px;
+  }
+}
